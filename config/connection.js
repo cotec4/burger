@@ -1,8 +1,9 @@
 const mysql = require("mysql");
+let PORT = process.env.PORT || 8800;
 
 const connection = mysql.createConnection({
     host: "localhost",
-    port: 3306,
+    port: PORT,
     user: "root",
     password: "root",
     database: "burgers_db"
