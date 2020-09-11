@@ -11,14 +11,14 @@ const orm = {
     insertOne: (burger_name, callback) => {
         let queryString = "INSERT INTO burgers (burger_name, devoured) VALUES (?,?);";
         console.log(burger_name);
-        connection.query(queryString, [ burger_name, false ], (err, result) => {
+        connection.query(queryString, [burger_name, false], (err, result) => {
             if (err) throw err;
             callback(result);
         });
     },
     updateOne: (id, callback) => {
-        let queryString = "UPDATE burgers SET ?? WHERE ??;";
-        connection.query(queryString, [{ devoured: true }, { id: id }], (err, result) => {
+        let queryString = "UPDATE burgers SET devoured = ? WHERE id = ?;";
+        connection.query(queryString, [true, id], (err, result) => {
             if (err) throw err;
             callback(result);
         });

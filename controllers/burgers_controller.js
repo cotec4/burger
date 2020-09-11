@@ -23,6 +23,13 @@ router.post("/burgers/create", (req, response) => {
 });
 
 // Moving from uneaten to devoured
-// router.
+router.post("/burgers/update/:id", (req,response) => {
+    burger.updateOne(req.params.id, (res) => {
+        response.render("index", {
+            burgers:res
+        });
+        response.redirect("/");
+    });
+});
 
 module.exports = router
