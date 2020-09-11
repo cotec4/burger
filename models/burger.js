@@ -6,8 +6,8 @@ const burger = {
             callback(response);
         });
     },
-    insertOne: (cols, vals, callback) => {
-        orm.insertOne(cols, vals, (response) => {
+    insertOne: (burger_name, callback) => {
+        orm.insertOne(burger_name, (response) => {
             callback(response);
         });
     },
