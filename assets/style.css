@@ -1,7 +1,21 @@
 .container {
-    background-image: url("https://i.ytimg.com/vi/CxoID-kN7xs/maxresdefault.jpg");
+    background-image: url("https://media1.tenor.com/images/b6bbb3deec705830f5b8f6ea5feadc16/tenor.gif?itemid=12029786");
 }
+
 .jumbotron {
-    background-color: white;
-    color: gold
+    background-image: url("https://media2.giphy.com/media/o9hzIlJ4ijpAs/giphy.gif");
+    background-repeat: no-repeat;
+    height: 275px;
+    background-position-x: center;
+    background-color: transparent;
+}
+
+.lead {
+    padding-top: 20px;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    padding-bottom: 5px;
 }

@@ -1,14 +1,12 @@
 <div class="container">
+	<p><a href="https://giphy.com/gifs/food-new-york-eat-l3q2yYjmP0Han0ICI">via GIPHY</a></p>
 	<div class="jumbotron">
-		<h1>Welcome to Good Burger Home of the Good Burger!</h1>
 	</div>
 
-
 	<div class="row">
-
-		<div class="col-md-4 col-md-offset-1">
+		<div class="col-md-5 col-md-offset-1" id="order">
 			<div class="panel-panel default">
-				<h1>Can I take your order?</h1>
+				<h1>Gimme that Good Burger!</h1>
 				<ul class="list-group">
 					{{#each burgers}}
 					{{#unless this.devoured}}
@@ -31,34 +29,33 @@
 			</div>
 		</div>
 
-
-		<div class="row">
-			<div class="col-md-4 col-md-offset-2">
-				<h1>Devoured Burgers</h1>
-				<div class="panel panel-default">
-					<ul class="list-group">
-						{{#each burgers}}
-						{{#if this.devoured}}
-						<li class="list-group-item">
-							<p class="lead">{{this.burger_name}}</p>
-						</li>
-						{{/if}}
-						{{/each}}
-					</ul>
-				</div>
+		<div class="col-md-5" id="devouredBurgers">
+			<h1>Hmm that's a Good Burger!</h1>
+			<div class="panel panel-default">
+				<ul class="list-group">
+					{{#each burgers}}
+					{{#if this.devoured}}
+					<li class="list-group-item">
+						<p class="lead">{{this.burger_name}}</p>
+					</li>
+					{{/if}}
+					{{/each}}
+				</ul>
 			</div>
 		</div>
+	</div>
 
+	<div class="row" id="addBurger">
 		<div class="col-md-10 col-md-offset-1">
-			<p class="lead">Add Burger</p>
+			<h1>Can I take your order?</h1>
 
 			<form class="create-update-form" action="burgers/create" method="POST">
 				<div class="form-group">
 					<textarea class="form-control input-lg" type="text" name="burger_name" row="3"></textarea>
 				</div>
-				<button class="btn btn-default btn-lg" type="submit">Submit</button>
+				<button class="btn btn-default btn-lg" type="submit">Add</button>
 			</form>
 		</div>
-
 	</div>
+
 </div>
